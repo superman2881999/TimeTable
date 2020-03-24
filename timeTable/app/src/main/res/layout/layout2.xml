@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập MSSV"
+        android:padding="16dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/MSSV"
+        android:background="@drawable/border2"
+        />
+    <Button
+        android:id="@+id/DangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MSSV"
+        android:text="Đăng nhập"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/border"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400px"
+        android:layout_height="500px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        tools:srcCompat="@drawable/BK" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bản quyền thuộc về team 7"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"/>
+</RelativeLayout>
