@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android= "http://schemas.android.com/apk/res/android"
+    android:id="@+id/myVerticalScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="1000dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -10,6 +14,7 @@
         android:orientation="horizontal"
         android:background="#FFFFFF">
         <Button
+            android:id="@+id/dauTru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
@@ -43,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 2"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -61,23 +66,24 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
+                    android:id="@+id/tenlop1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:text="Phòng:D3-5 201"
                     android:gravity="center_vertical"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -86,7 +92,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -98,7 +104,7 @@
                     android:gravity="center"
                     android:textSize="20sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -123,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 3"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -141,23 +147,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginLeft="10dp"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
                     android:text="Phòng:D3-5 201"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -166,7 +172,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -178,7 +184,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="20sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -204,7 +210,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 4"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -222,23 +228,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="Phòng:D3-5 201"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -247,7 +253,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -259,7 +265,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="20sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -286,7 +292,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 5"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -304,23 +310,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Phòng:D3-5 201"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -329,7 +335,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -341,7 +347,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="20sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -367,7 +373,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 6"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -385,23 +391,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Phòng:D3-5 201"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -448,7 +454,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 7"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -466,23 +472,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Phòng:D3-5 201"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -491,7 +497,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -503,7 +509,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="20sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -529,7 +535,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Chủ nhật"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
@@ -548,23 +554,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Giải tích"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Phòng:D3-5 201"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="17sp" />
+                    android:textSize="23sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -573,7 +579,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -585,7 +591,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="20sp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -613,3 +619,4 @@
 
 
 </LinearLayout>
+</ScrollView>
