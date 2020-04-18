@@ -14,6 +14,7 @@ import android.connection.connection;
 import android.connection.DAO;
 
 import java.sql.SQLException;
+import android.app.checkdata;
 
 public class DangNhap extends AppCompatActivity {
     private Button DangNhap;
@@ -24,13 +25,16 @@ public class DangNhap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout2);
 
-        DangNhap= (Button) findViewById(R.id.DangNhap);
-        MSSV = (EditText) findViewById(R.id.MSSV);
+        DangNhap= findViewById(R.id.DangNhap);
+        MSSV =  findViewById(R.id.MSSV);
+
+        String mssv = MSSV.getText().toString().trim();
+        checkdata check = new checkdata();
+        check.getData(mssv,this);
         DangNhap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-//                try {
-//                    if(MSSV.getText().toString() == dao.ht()){
+
                         Toast.makeText(DangNhap.this,"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(DangNhap.this, MainActivity.class);
                             startActivity(intent);

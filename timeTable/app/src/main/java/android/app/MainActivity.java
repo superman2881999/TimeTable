@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
        Faker faker = new Faker();
-
           for(int i=0 ; i<=7;i++){
               list.add(new ItemModel(faker.date.toString(),faker.lorem.sentence(),faker.lorem.sentence(),faker.time.toString(),faker.time.toString()));
           }
