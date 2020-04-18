@@ -1,98 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <LinearLayout
-        android:id="@+id/tv_name"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#C5CAE9"
-        android:orientation="vertical">
+    >
 
         <TextView
+            android:id="@+id/tv_day"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thứ 2"
             android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:layout_marginLeft="10dp"/>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/tv_day"
+            android:text="Giải tích"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_room"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/border2"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_weight="1">
+            android:layout_below="@id/tv_subject"
+            android:text="Phòng:D3-5 201"
+            android:gravity="center_vertical"
+            android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_timeStart"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/tv_timeEnd"
+            android:layout_alignTop="@id/tv_subject"
+            android:layout_alignBottom="@id/tv_subject"
+            android:text="9:30"
+            android:background="#455A64"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/tenlop1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="Giải tích"
-                    android:gravity="center_vertical"
-                    android:textSize="17sp" />
+        <TextView
+            android:id="@+id/tv_timeEnd"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_subject"
+            android:layout_alignBottom="@id/tv_subject"
+            android:text="12:30"
+            android:background="#455A64"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="Phòng:D3-5 201"
-                    android:gravity="center_vertical"
-                    android:textSize="17sp" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:text="9:30"
-                    android:background="#455A64"
-                    android:textColor="#FFFFFF"
-                    android:gravity="center"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="12:30"
-                    android:background="#455A64"
-                    android:textColor="#FFFFFF"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="10dp" />
-
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

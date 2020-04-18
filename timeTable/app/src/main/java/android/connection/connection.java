@@ -7,11 +7,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 public class connection {
-    String ip="192.168.1.148";
+    String ip="42.118.9.247";
     String classs="net.sourceforge.jtds.jdbc.Driver";
-    String db="SV";
-    String us="sa";
-    String pw="1";
+    String db="timeTable";
+    String us="letuan3112";
+    String pw="Technology2312";
 
     public Connection CONN(){
         StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
