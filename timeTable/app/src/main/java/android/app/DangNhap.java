@@ -5,16 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.R;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import java.sql.Connection;
-import android.connection.connection;
-import android.connection.DAO;
 
-import java.sql.SQLException;
-import android.app.checkdata;
+import org.json.JSONArray;
 
 public class DangNhap extends AppCompatActivity {
     private Button DangNhap;
@@ -29,12 +25,9 @@ public class DangNhap extends AppCompatActivity {
         MSSV =  findViewById(R.id.MSSV);
 
         String mssv = MSSV.getText().toString().trim();
-        checkdata check = new checkdata();
-        check.getData(mssv,this);
         DangNhap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-
                         Toast.makeText(DangNhap.this,"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(DangNhap.this, MainActivity.class);
                             startActivity(intent);

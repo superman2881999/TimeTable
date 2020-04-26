@@ -1,20 +1,36 @@
 package android.app.models;
 
 
-public class ItemModel  {
+import androidx.annotation.NonNull;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class Timetable  {
 
     String tvDay;
     String tvSubject;
     String tvRoom;
     String timeStart;
     String timeEnd;
+    public  Timetable() {
 
-    public ItemModel(String tvDay, String tvSubject, String tvRoom, String timeStart, String timeEnd) {
+    }
+
+    public Timetable(String tvDay, String tvSubject, String tvRoom, String timeStart, String timeEnd) {
         this.tvDay = tvDay;
         this.tvSubject = tvSubject;
         this.tvRoom = tvRoom;
         this.timeStart = timeStart;
         this.timeEnd = timeEnd;
+    }
+
+    public void parseTimetable(JSONObject time) throws JSONException {
+        this.tvDay = time.getString("Thu");
+        this.tvSubject = time.getString("Ten_Lop");
+        this.tvRoom = time.getString("Phong_Hoc");
+        this.timeStart = time.getString("Bat_Dau");
+        this.timeEnd = time.getString("Ket_Thuc");
     }
 
     public String getTvDay() {
@@ -55,5 +71,10 @@ public class ItemModel  {
 
     public void setTimeEnd(String timeEnd) {
         this.timeEnd = timeEnd;
+    }
+
+    @Override
+    public String toString() {
+        return "tvDay: " + this.getTvDay() + "tvSubject" + this.getTvSubject();
     }
 }

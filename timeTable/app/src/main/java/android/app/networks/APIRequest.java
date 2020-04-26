@@ -1,4 +1,4 @@
-package android.app;
+package android.app.networks;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,25 +14,29 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 
-public class checkdata {
+public class APIRequest {
+    private  String url;
+    private  Context ctx;
 
+    public APIRequest(String url, Context ctx) {
+        this.url = url;
+        this.ctx = ctx;
+    }
 
-        public void getData(String mssv, Context ctx){
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-            final JSONArray[] array = new JSONArray[1];
-// Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(ctx);
-        String url = "https://bktimetable.azurewebsites.net/api/tables/" + mssv;
-
-// Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+    public void req(final VolleyCallback callback){
+        RequestQueue queue = Volley.newRequestQueue(this.ctx);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, this.url
+                ,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        // Display the first 500 characters of the response string.
                         try {
-                            array[0] = new JSONArray(response);
-                            Log.d("TAG", String.valueOf(array[0]));
+                            JSONArray temp = new JSONArray(response);
+                            callback.onSuccess(temp);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -40,11 +44,9 @@ public class checkdata {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Log.d("TAG", String.valueOf(error));
             }
         });
-
-// Add the request to the RequestQueue.
         queue.add(stringRequest);
 
     }

@@ -1,7 +1,7 @@
 package android.app.adapters;
 
 import android.app.R;
-import android.app.models.ItemModel;
+import android.app.models.Timetable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +14,9 @@ import java.util.zip.Inflater;
 
 public class KteamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    List<ItemModel> items;
+    List<Timetable> items;
 
-    public KteamAdapter(List<ItemModel> items) {
+    public KteamAdapter(List<Timetable> items) {
 
         this.items = items;
     }
@@ -30,7 +30,7 @@ public class KteamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ItemModel itemModel = items.get(position);
+        Timetable itemModel = items.get(position);
         ViewHolder viewHolder =(ViewHolder) holder;
         viewHolder.tvDay.setText(itemModel.getTvDay());
         viewHolder.tvSubject.setText(itemModel.getTvSubject());
