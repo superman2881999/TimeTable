@@ -10,13 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-import java.util.zip.Inflater;
 
-public class KteamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     List<Timetable> items;
 
-    public KteamAdapter(List<Timetable> items) {
+    public ItemsAdapter(List<Timetable> items) {
 
         this.items = items;
     }
@@ -24,7 +23,7 @@ public class KteamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_name,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_alarm,parent,false);
         return new ViewHolder(view);
     }
 

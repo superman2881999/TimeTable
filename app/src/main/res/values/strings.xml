@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">timeTable</string>
+    <string name="app_name">TimeTable</string>
+    <string name="nav_alarm">Alarm</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_homework">Homework</string>
+    <string name="nav_transcript">Transcript</string>
+    <string name="nav_account">Account</string>
 </resources>
