@@ -4,6 +4,11 @@ public class Transcript {
     String tv_subject;
     String tv_point;
 
+    public Transcript(String tv_subject, String tv_point) {
+        this.tv_subject = tv_subject;
+        this.tv_point = tv_point;
+    }
+
     public String getTv_subject() {
         return tv_subject;
     }
@@ -20,8 +25,5 @@ public class Transcript {
         this.tv_point = tv_point;
     }
 
-    public Transcript(String tv_subject, String tv_point) {
-        this.tv_subject = tv_subject;
-        this.tv_point = tv_point;
-    }
+
 }
