@@ -38,26 +38,29 @@ public class AlarmFragment extends Fragment {
     }
     @Nullable
     @Override
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_alarm, container, false);
         myRecycleView = view.findViewById(R.id.recyclerView);
-        ItemsAdapter itemsAdapter = new ItemsAdapter(lsTimetable);
+        lsTimetable = new ArrayList<>();
+        final ItemsAdapter itemsAdapter = new ItemsAdapter(lsTimetable);
         myRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
         myRecycleView.setAdapter(itemsAdapter);
-        return view;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         APIRequest reqTimeTable = new APIRequest(BASE_URL, getActivity());
         final Timetables timetables = new Timetables();
         reqTimeTable.req(new VolleyCallback() {
             @Override
             public void onSuccess(JSONArray result) throws JSONException {
                 timetables.parseTimetables(result);
+                lsTimetable.addAll(timetables.getTimetables());
+                itemsAdapter.notifyDataSetChanged();
             }
         });
-        lsTimetable = timetables.getTimetables();
+        return view;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 }
