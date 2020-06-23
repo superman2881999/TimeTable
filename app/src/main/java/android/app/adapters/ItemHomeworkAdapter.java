@@ -1,13 +1,17 @@
 package android.app.adapters;
 
 import android.app.R;
+import android.app.fragment.DetailHomeworkFragment;
 import android.app.models.Homework;
-import android.app.models.Transcript;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,19 +48,34 @@ public class ItemHomeworkAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         Homework homework = displayHomework.get(position);
         viewHolder.firstname.setText(homework.getClassname().substring(0,1));
         viewHolder.classname.setText(homework.getClassname());
+        viewHolder.classname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                Fragment myFragment = new DetailHomeworkFragment();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
     }
     @Override
     public int getItemCount() {
         return displayHomework.size();
     }
-    class HomeworkViewholder extends RecyclerView.ViewHolder {
+    class HomeworkViewholder extends RecyclerView.ViewHolder{
         TextView classname;
         TextView firstname;
         public HomeworkViewholder(@NonNull View itemView) {
             super(itemView);
             classname = itemView.findViewById(R.id.tv_classname);
             firstname = itemView.findViewById(R.id.tv_firstname);
+
         }
+
+
     }
 }
 

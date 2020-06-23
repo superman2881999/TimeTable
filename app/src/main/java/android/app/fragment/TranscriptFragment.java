@@ -1,13 +1,9 @@
 package android.app.fragment;
 
 import android.app.R;
-import android.app.adapters.ItemsAdapter;
-import android.app.adapters.ItemsTranscriptAdapter;
-import android.app.models.Timetable;
-import android.app.models.Timetables;
-import android.app.models.Transcript;
-import android.app.networks.APIRequest;
-import android.app.networks.VolleyCallback;
+import android.app.adapters.ItemHomeworkAdapter;
+import android.app.adapters.ItemTranscriptAdapter;
+import android.app.models.transcript;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,40 +15,39 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.github.mikephil.charting.charts.PieChart;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.bloco.faker.Faker;
-
 public class TranscriptFragment extends Fragment {
+
     View view;
-    private RecyclerView rcv_Transcript;
-    private List<Transcript> lsTrans;
+    private PieChart mChart;
+    private RecyclerView rcv_listSubject;
+    private List<transcript> listSubject;
 
-    public TranscriptFragment(){
-
-    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_transcript, container, false);
-        rcv_Transcript = view.findViewById(R.id.rcv_transcript);
-        ItemsTranscriptAdapter itemsTranscriptAdapter = new ItemsTranscriptAdapter(lsTrans);
-        rcv_Transcript.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rcv_Transcript.setAdapter(itemsTranscriptAdapter);
+        rcv_listSubject = view.findViewById(R.id.rcv_list);
+        mChart = view.findViewById(R.id.piechart);
+        final ItemTranscriptAdapter itemHomeworkAdapter = new ItemTranscriptAdapter(listSubject,getContext(),mChart);
+        rcv_listSubject.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rcv_listSubject.setAdapter(itemHomeworkAdapter);
         return view;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        lsTrans = new ArrayList<>();
-        Faker faker = new Faker();
-        for(int i = 0; i <=10; i++){
-            lsTrans.add(new Transcript(faker.name.name(),faker.number.number(10)));
-        }
+        listSubject = new ArrayList<>();
+        listSubject.add(new transcript("Thuật toán ứng dụng"));
+        listSubject.add(new transcript("Kỹ năng mềm"));
+        listSubject.add(new transcript("Phân tích thiết kế hệ thống"));
+        listSubject.add(new transcript("Lập trình mạng"));
+        listSubject.add(new transcript("Phát triển ứng dụng cho thiết bị di động"));
+        listSubject.add(new transcript("An toàn thông tin"));
     }
 }

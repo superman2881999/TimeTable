@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+   >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultFocusHighlightEnabled="true"
+        />
+    <TextView
+        android:id="@+id/tv_ghi_chu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_picker"
+        android:text="Ghi Chú: "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:layout_below="@id/tv_ghi_chu"
+        android:id="@+id/edt_ghi_chu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+
+</RelativeLayout>
+</ScrollView>

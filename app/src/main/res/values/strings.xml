@@ -5,4 +5,8 @@
     <string name="nav_homework">Homework</string>
     <string name="nav_transcript">Transcript</string>
     <string name="nav_account">Account</string>
+    <string name="giao_vien">Giáo viên</string>
+    <string name="tc_n305">TC\n305</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

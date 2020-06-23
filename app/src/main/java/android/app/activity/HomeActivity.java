@@ -1,7 +1,13 @@
 package android.app.activity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.R;
+import android.app.fragment.TranscriptFragment;
+import android.app.service.AlarmReceiver;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,11 +19,15 @@ import android.app.fragment.AlarmFragment;
 import android.app.fragment.HomeworkFragment;
 import android.app.fragment.NotificationFragment;
 import android.app.fragment.AccountFragment;
-import android.app.fragment.TranscriptFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends AppCompatActivity {
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
+public class HomeActivity extends AppCompatActivity{
 
     Toolbar toolbar;
     @Override
@@ -25,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         InitView();
+
     }
 
     private void InitView(){
@@ -56,10 +67,6 @@ public class HomeActivity extends AppCompatActivity {
                             selectedFragment = new TranscriptFragment();
                             toolbar.setTitle(R.string.nav_transcript);
                             break;
-                        case R.id.nav_notification:
-                            selectedFragment = new NotificationFragment();
-                            toolbar.setTitle(R.string.nav_notification);
-                            break;
                         case R.id.nav_homework:
                             selectedFragment = new HomeworkFragment();
                             toolbar.setTitle(R.string.nav_homework);
@@ -73,4 +80,6 @@ public class HomeActivity extends AppCompatActivity {
                     return  true;
                 }
             };
+
+
 }

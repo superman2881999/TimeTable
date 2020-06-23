@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativelayout">
+
+    <TextView
+        android:id="@+id/tv_phong_hoc"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="#2155F3"
+        android:text="@string/tc_n305"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_mon_hoc_ma_lop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_phong_hoc"
+        android:text="[694622] Kỹ năng mềm"
+        android:textStyle="bold"
+        android:textColor="#214EF3"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_thoi_gian_tuan_hoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_phong_hoc"
+        android:layout_below="@id/tv_mon_hoc_ma_lop"
+        android:singleLine="true"
+        android:text="15h5-17h30 (28,30,32,34,38,40,42,44) "
+        android:textColor="#F43636"
+        android:textSize="13sp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_loai_lop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_phong_hoc"
+        android:layout_below="@id/tv_thoi_gian_tuan_hoc"
+        android:singleLine="true"
+        android:text="LT+BT"
+        android:textSize="13sp"
+        android:textColor="#CE000000"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_below="@id/tv_loai_lop"
+        android:layout_marginBottom="0dp"/>
+
+
+</RelativeLayout>

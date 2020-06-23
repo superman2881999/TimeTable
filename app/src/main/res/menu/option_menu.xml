@@ -10,15 +10,9 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/item1"
-        android:title="item1"/>
+        android:title="Cập nhật lịch học"/>
     <item
         android:id="@+id/item2"
-        android:title="item2"/>
-    <item
-        android:id="@+id/item3"
-        android:title="item3"/>
-    <item
-        android:id="@+id/item4"
-        android:title="item4"/>
+        android:title="Huỷ"/>
 
 </menu>

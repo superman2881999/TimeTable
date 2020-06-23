@@ -1,58 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    <TextView
-        android:id="@+id/tv_choose"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/MS"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/imageView"
-        android:text="Bạn là :"/>
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/rg_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_choose"
-        android:layout_alignLeft="@id/MS">
-        <RadioButton
-            android:id="@+id/rb_teacher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Giáo viên"
-            />
-        <RadioButton
-            android:id="@+id/rb_student"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Sinh viên"/>
-    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_menu"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        >
 
-    <EditText
-        android:id="@+id/MS"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_gmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rg_choose"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="18dp"
-        android:hint="Nhập MSSV"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/border2"
-        android:drawableRight="@drawable/ic_person_black_24dp"
-        android:padding="16dp" />
+        app:errorEnabled="true"
+         >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:text="dung.la173054@sis.hust.edu.vn"
+            android:inputType="textEmailAddress"
+            android:background="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:text="123456"
+            android:inputType="textPassword"
+            android:background="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/MS"
-        android:layout_alignLeft="@+id/MS"
         android:layout_marginTop="20dp"
         android:text="Nhớ mật khẩu"
         android:checked="true"/>
@@ -60,31 +76,37 @@
         android:id="@+id/DangNhap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/checkbox"
-        android:text="Đăng nhập"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/border"
-        />
+        android:text="Đăng nhập" />
+    <TextView
+        android:id="@+id/tv_quen_mk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu ?"
+        android:textColor="#032BF4"
+        android:gravity="right"
+        android:textSize="13sp"
+    />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bản quyền thuộc về team 7"
         android:textSize="10sp"
-        android:layout_alignParentBottom="true"
-        android:textColor="#000000"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        app:srcCompat="@drawable/bk1" />
-
-</RelativeLayout>
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/relative"
+        app:layout_constraintTop_toTopOf="@+id/relative"
+        app:srcCompat="@drawable/bk1"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
